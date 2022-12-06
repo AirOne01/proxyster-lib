@@ -9,3 +9,4 @@ use crate::provider::Provider;
 pub struct Config {
     pub providers: Vec<Provider>,
 }
+

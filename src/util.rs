@@ -1,5 +1,5 @@
-use std::fs::read_to_string;
 use dirs::config_dir;
+use std::fs::read_to_string;
 
 use crate::config::Config;
 
@@ -41,3 +41,4 @@ pub fn read_config() -> Config {
     );
     toml::from_str(&read_to_string(providers_file).unwrap()[..]).unwrap()
 }
+
