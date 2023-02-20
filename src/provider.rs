@@ -21,7 +21,7 @@ pub struct Provider {
     pub sources: Vec<ProviderSource>, // array of InitialProviderSource
 }
 
-// implement From for Providerpo
+// implement From for Provider
 impl From<toml::Value> for Provider {
     fn from(value: toml::Value) -> Self {
         let sources: Vec<ProviderSource> = value
