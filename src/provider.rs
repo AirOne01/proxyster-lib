@@ -28,7 +28,7 @@ impl From<toml::Value> for Provider {
             .get("sources")
             .unwrap()
             .as_array()
-            .unwrap()
+            .expect("sources should be converted to an array")
             .iter()
             .map(|v| ProviderSource::from(v.clone()))
             .collect();
